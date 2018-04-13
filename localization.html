@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Localization</title>
+        <style>
+            .lang {
+                display: none;
+            }
+
+            .lang.visible {
+                display: inline;
+            
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="languages">
+            <label>
+                <input type="radio" name="lang">UA
+            </label>
+            <label>
+                <input type="radio" name="lang">RU
+            </label>
+            <label>
+                <input type="radio" name="lang">ENG
+            </label>
+        </div>
+        
+        <div id="welcome-message">
+            <span class="lang lang-ua">Привіт</span>
+            <span class="lang lang-ru">Привет</span>
+            <span class="lang lang-eng">Hello</span>
+            , username!
+        
+            <span class="lang lang-ua">Раді тебе бачити!</span>
+        </div>
+        <!-- <button id="save">Save</button> -->
+
+        <script src="localization.js"></script>
+    </body>
+</html>

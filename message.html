@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>OS Message</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+            .download-message {
+                display: none;
+                font-size: 5vh;
+                margin-top: 20%;
+            }
+            .btn {
+                margin-top: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="download-message" data-version="macos">
+            Download MacOS version of our app.
+        </div>
+        
+        <div class="download-message" data-version="windows">
+            Download Windows version of our app.
+        </div>
+        
+        <div class="download-message" data-version="linux">
+            Download Linux version of our app.
+        </div>
+        <button class="btn btn-danger" type="button" >Пуск <i class="fas fa-rocket"></i></button>
+
+        <script src="message.js"></script>
+    </body>
+</html>
