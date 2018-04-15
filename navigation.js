@@ -9,6 +9,7 @@ document.body.onkeydown = function (e) {
     var KEYCODE_UP = 87;
     var KEYCODE_DOWN = 83;    
     var KEYCODE_FIRE = 32;
+console.log(el.style.transform);
     
     var screenHeight = window.screen.availHeight - 130;
     if (e.keyCode == KEYCODE_LEFT) {
@@ -24,8 +25,6 @@ document.body.onkeydown = function (e) {
         el.style.transform = "rotate(0deg)";
     }
     else if (e.keyCode == KEYCODE_DOWN) {
-        console.log(screenHeight);
-        console.log(parseInt(el.style.top));
         el.style.top = (parseInt(el.style.top) > screenHeight)? parseInt(el.style.top) : (parseInt(el.style.top) + 10) + 'px';
         el.style.transform = "rotate(180deg)";
     }
@@ -37,7 +36,7 @@ document.body.onkeydown = function (e) {
 function fire() {
     var fire = document.createElement("div");
     fire.id = "fire";
-    if (el.style.transform == "rotate(0deg)") {
+    if (el.style.transform == "rotate(0deg)" || el.style.transform == '') {
         fire.style.top = parseInt(el.style.top) + 'px';
         fire.style.left = (parseInt(el.style.left) + 20) + 'px';
     } else if (el.style.transform == "rotate(-90deg)") {
@@ -58,7 +57,7 @@ function fire() {
         if (parseInt(fire.style.left) < 0 || parseInt(fire.style.left) > window.screen.availWidth || parseInt(fire.style.top) < 0 || parseInt(fire.style.top) > window.screen.availHeight) {
             fire.remove();
             clearInterval(set);
-        } else if (direction == "rotate(0deg)") {
+        } else if (direction == "rotate(0deg)" || el.style.transform == '') {
             fire.style.top = (parseInt(fire.style.top) - 5) + 'px';
         } else if (direction == "rotate(180deg)") {
             fire.style.top = (parseInt(fire.style.top) + 5) + 'px';
