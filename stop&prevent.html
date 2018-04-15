@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Stop & Prevent</title>
     <style>
         .text {
             margin: 100px auto;
             width: 50%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .container {
+            /* height: 50%; */
+            width: 70%;
+            margin: 0 auto;
+            display:flex;
+            justify-content: space-between;
+        }
+        #box1 {
+            background: red;
+            width: 200px; height: 200px;
+        }
+
+        #box2 {
+            background: green;
+            width: 150px; height: 150px;
+        }
+
+        #box3 {
+            background: blue;
+            width: 100px; height: 100px;
         }
     </style>
 </head>
 <body>
-    <div class="text">
+    <div class="container">
+
+        <div id="box1" class="box">
+            <div id="box2" class="box">
+                <div id="box3" class="box">
+                </div>
+            </div>
+        </div>
         
+        <form id="myForm" action="/my-handling-form-page" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" />
+            </div>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" />
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg"></textarea>
+            </div>
+            
+            <div class="button">
+                <button type="submit">Send your message</button>
+            </div>
+        </form>
     </div>
-    <script src="stop&prevent.js"></script>
+ 
+
+    
+    <div class="text">
+        метод preventDefault() дозволяє виконання дії, але запобігає подальшому поширенню поточної події. 
+        на прикладі коду подія (alert) не поширюється на батьківські елементи. метод preventDefault() 
+        скасовує дію браузера на елементі за замовчуванням, приміром запобігає виконанню submit при натисканні кнопки в input form.
+    </div>
+    <script >
+        var onClick = function (e) {
+            var $el = e.target;
+
+            e.stopPropagation();
+        
+                
+            $el.style.backgroundColor = 'yellow';
+            alert('CLICK!');
+            $el.style.backgroundColor = ''; 
+        }
+
+        //document.body.onclick = onClick;
+        box1.onclick = onClick;
+        box2.onclick = onClick;
+        box3.onclick = onClick;
+
+        document.getElementById("myForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+        })
+
+    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-document.getElementById('android').style.top = '50px';
-document.getElementById('android').style.left = '50px';
+document.getElementById('android').style.top = '250px';
+document.getElementById('android').style.left = '350px';
 var el;
 document.body.onkeydown = function (e) {
     el = document.getElementById('android');
@@ -51,7 +51,7 @@ function fire() {
     document.body.appendChild(fire);
     var direction = el.style.transform;
     var set = setInterval(fireFly, 20);
-    var screenWidth = (window.screen.availWidth);
+
     function fireFly(){
         if (parseInt(fire.style.left) < 0 || parseInt(fire.style.left) > window.screen.availWidth || parseInt(fire.style.top) < 0 || parseInt(fire.style.top) > window.screen.availHeight) {
             fire.remove();
@@ -66,5 +66,27 @@ function fire() {
             fire.style.left = (parseInt(fire.style.left) + 5) + 'px';
         }
     }
-
 }
+
+var setApple = setInterval(apple,5000);
+function apple () {
+    var leftApplePosition = Math.floor(Math.random() * (window.screen.availWidth)) + 'px';
+    var apple = document.createElement("div");
+    apple.id = 'apple';
+    apple.style.top = '0px';
+    apple.style.left = leftApplePosition;
+    document.body.appendChild(apple);
+
+    var setAppleMove = setInterval(appleFly, 500);
+
+    function appleFly() {
+        if (parseInt(apple.style.top) < 0 || parseInt(apple.style.top) > window.screen.availHeight-110) {
+            apple.remove();
+            clearInterval(setApple);
+        }else {
+            apple.style.top = (parseInt(apple.style.top) + 10) + 'px';
+        }
+    }
+}
+
+
