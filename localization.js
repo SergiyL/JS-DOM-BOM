@@ -1,5 +1,4 @@
-// var applyLanguage = function (lang) {
-// 	alert('now language is: ' + lang);
+
 
 
 var defaultLanguage = '';

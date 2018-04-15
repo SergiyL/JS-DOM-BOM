@@ -9,7 +9,6 @@ document.body.onkeydown = function (e) {
     var KEYCODE_UP = 87;
     var KEYCODE_DOWN = 83;    
     var KEYCODE_FIRE = 32;
-console.log(el.style.transform);
     
     var screenHeight = window.screen.availHeight - 130;
     if (e.keyCode == KEYCODE_LEFT) {
@@ -51,7 +50,7 @@ function fire() {
     }
     document.body.appendChild(fire);
     var direction = el.style.transform;
-    var set = setInterval(fireFly, 30);
+    var set = setInterval(fireFly, 20);
     var screenWidth = (window.screen.availWidth);
     function fireFly(){
         if (parseInt(fire.style.left) < 0 || parseInt(fire.style.left) > window.screen.availWidth || parseInt(fire.style.top) < 0 || parseInt(fire.style.top) > window.screen.availHeight) {

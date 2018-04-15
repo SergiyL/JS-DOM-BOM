@@ -15,7 +15,6 @@ function createForm() {
     form.insertAdjacentHTML('beforeend', submit);
 
     submit.addEventListener("onclick", validation);
-
 }
 createForm();
 

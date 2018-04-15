@@ -6,28 +6,37 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Localization</title>
         <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
             .lang {
                 display: none;
+            }
+            div.box {
+                margin-top: 10vh;
             }
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">        
     </head>
     <body>
-        
-        <form>
-            <input type="radio" name="lang" value="ua">UA
-            <input type="radio" name="lang" value="ru">RU
-            <input type="radio" name="lang" value="eng">ENG
-        </form>
+        <div class="box">
+            <form>
+                <input type="radio" name="lang" value="ua">UA
+                <input type="radio" name="lang" value="ru">RU
+                <input type="radio" name="lang" value="eng">ENG
+            </form>
+                
             
-        
-        <div id="welcome-message">
-            <span class="lang lang-ua">Вітаємо, друже</span>
-            <span class="lang lang-ru">Шуруй за парєбрік</span>
-            <span class="lang lang-eng">Hello. God save the queen</span>
+            <div id="welcome-message">
+                <span class="lang lang-ua">Вітаємо, друже</span>
+                <span class="lang lang-ru">Шуруй за парєбрік</span>
+                <span class="lang lang-eng">Hello. God save the queen</span>
+            </div>
+    
+            <button class="btn btn-success">Зберегти</button>
         </div>
-
-        <button class="btn btn-success">Зберегти</button>
+        
 
         <script src="localization.js"></script>
     </body>
