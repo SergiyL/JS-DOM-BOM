@@ -14,7 +14,7 @@ function createForm() {
     form.insertAdjacentHTML('beforeend', third);
     form.insertAdjacentHTML('beforeend', submit);
 
-    submit.addEventListener("click", validation); /// не спрацьовує addEventListener
+    document.querySelector('input[type="submit"]').addEventListener("click", validation); 
 }
 createForm();
 

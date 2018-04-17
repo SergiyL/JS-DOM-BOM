@@ -1,6 +1,4 @@
 
-
-
 var defaultLanguage = '';
 if (localStorage.getItem("language") === null) {
     defaultLanguage = 'ua';
