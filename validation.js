@@ -6,7 +6,7 @@ function createForm() {
     let first = '<input type="text" name="age" placeholder="age">';
     let second = '<input type="text" name="username" placeholder="username">';
     let third = '<input type="text" name="date" placeholder="date">';
-    let submit = '<input type="submit" value="Validate Me" onclick="validation()">';
+    let submit = '<input type="submit" value="Validate Me">';
 
     document.body.appendChild(form);
     form.insertAdjacentHTML('afterbegin', first);
@@ -14,7 +14,7 @@ function createForm() {
     form.insertAdjacentHTML('beforeend', third);
     form.insertAdjacentHTML('beforeend', submit);
 
-    submit.addEventListener("onclick", validation);
+    submit.addEventListener("click", validation); /// не спрацьовує addEventListener
 }
 createForm();
 
