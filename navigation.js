@@ -68,25 +68,25 @@ function fire() {
     }
 }
 
-var setApple = setInterval(apple,5000);
-function apple () {
-    var leftApplePosition = Math.floor(Math.random() * (window.screen.availWidth)) + 'px';
-    var apple = document.createElement("div");
-    apple.id = 'apple';
-    apple.style.top = '0px';
-    apple.style.left = leftApplePosition;
-    document.body.appendChild(apple);
+// var setApple = setInterval(apple,5000);
+// function apple () {
+//     var leftApplePosition = Math.floor(Math.random() * (window.screen.availWidth)) + 'px';
+//     var apple = document.createElement("div");
+//     apple.id = 'apple';
+//     apple.style.top = '0px';
+//     apple.style.left = leftApplePosition;
+//     document.body.appendChild(apple);
 
-    var setAppleMove = setInterval(appleFly, 500);
+//     var setAppleMove = setInterval(appleFly, 500);
 
-    function appleFly() {
-        if (parseInt(apple.style.top) < 0 || parseInt(apple.style.top) > window.screen.availHeight-110) {
-            apple.remove();
-            clearInterval(setApple);
-        }else {
-            apple.style.top = (parseInt(apple.style.top) + 10) + 'px';
-        }
-    }
-}
+//     function appleFly() {
+//         if (parseInt(apple.style.top) < 0 || parseInt(apple.style.top) > window.screen.availHeight-110) {
+//             apple.remove();
+//             clearInterval(setApple);
+//         }else {
+//             apple.style.top = (parseInt(apple.style.top) + 10) + 'px';
+//         }
+//     }
+// }
 
 

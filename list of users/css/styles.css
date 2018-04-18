@@ -2,3 +2,15 @@ p {
     color: red;
     font-size: 10px;
 }
+form {
+    margin: 20px
+}
+.btn {
+    margin: 10px 0;
+}
+.employeesNumber, .averageSalary, .employeesLimit {
+    color: red;
+    margin-left: 250px;
+    position: absolute;
+    margin-top: -300px;
+}
