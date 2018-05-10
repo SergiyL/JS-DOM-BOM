@@ -2,9 +2,10 @@
 var defaultLanguage = '';
 if (localStorage.getItem("language") === null) {
     defaultLanguage = 'ua';
+    document.querySelector('input[value='+defaultLanguage+']').checked = true;
 } else {
-    defaultLanguage = localStorage.getItem("language")
-
+    defaultLanguage = localStorage.getItem("language");
+    document.querySelector('input[value='+defaultLanguage+']').checked = true;    
 }
 
 

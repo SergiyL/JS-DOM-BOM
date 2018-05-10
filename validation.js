@@ -18,9 +18,10 @@ function createForm() {
 }
 createForm();
 
-function validation() {
+function validation(e) {
+    e.preventDefault();
     let age = document.getElementsByName("age")[0].value;
-    if (age < 0 || age.includes(' ') || !Number.isInteger(parseInt(age))) {
+    if (age < 0 || /^\d+$/) {
         alert("input age is not valid");
     }
 
